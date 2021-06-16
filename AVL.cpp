@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int max(int a, int b){
-    if(a > b){
-        return a;
-    } else return b;
-}
-
 
 struct node{
     int num, height;
@@ -20,6 +14,12 @@ struct node *newNode(int num){
     temp->right = NULL;
     temp->height = 1;
     return temp;
+}
+
+int max(int a, int b){
+    if(a > b){
+        return a;
+    } else return b;
 }
 
 int getHeight(node* curr){
@@ -159,19 +159,23 @@ struct node *deleteNode(node *curr, int num){
 
 int main(){
     root = NULL;
-    root = input(root, 9);
-    root = input(root, 5);
-    root = input(root, 10);
-    root = input(root, 0);
-    root = input(root, 6);
-    root = input(root, 11);
-    root = input(root, -1);
     root = input(root, 1);
+    root = input(root, 6);
     root = input(root, 2);
+    root = input(root, 3);
+    root = input(root, 5);
+    root = input(root, 9);
+    root = input(root, 4);
+    root = input(root, 8);
+    root = input(root, 7);
+    root = input(root, 10);
     printf("Preorder traversal of the constructed AVL"
             " tree is \n");
     inOrder(root);
-    root = deleteNode(root, 10);
+    root = deleteNode(root, 1);
+    root = deleteNode(root, 8);
+    root = input(root, 1);
+    root = deleteNode(root, 2);
     printf("\n");
     inOrder(root);
 }
