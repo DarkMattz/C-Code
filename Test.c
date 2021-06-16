@@ -7,6 +7,6 @@ struct test{
 };
 
 int main(){
-    struct test testing;
-    testing.a = 1;
-    printf("%d\n", testing.a);
+    int *a;
+    int a[5];
+}
