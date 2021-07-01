@@ -4,6 +4,8 @@
 #include <time.h>
 #include <unistd.h>
 
+//test
+
 struct snakeStructure{
     int x, y;
     struct snakeStructure *before;
